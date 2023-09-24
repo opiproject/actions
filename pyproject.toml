@@ -1,0 +1,11 @@
+[tool.poetry]
+name = "opi"
+version = "0.0.1"
+description = "just an example"
+authors = ["OPI Dev <opi-dev@lists.opiproject.org>"]
+license = "Apache-2.0"
+readme = "README.md"
+
+[tool.poetry.group.test.dependencies]
+pytest = ">=1"
+pytest-cov = ">=1"
