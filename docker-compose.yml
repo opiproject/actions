@@ -6,7 +6,7 @@ version: "3.7"
 services:
 
   opi-test:
-    image: docker.io/library/alpine:3.18
+    image: docker.io/library/alpine:3.19
     networks:
       - opi
 
