@@ -3,6 +3,11 @@ name: Linters
 on:
   workflow_dispatch:
   workflow_call:
+    inputs:
+      with_golang:
+        required: false
+        default: true
+        type: boolean
   push:
     branches: [ main ]
   pull_request:
