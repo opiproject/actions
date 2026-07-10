@@ -102,7 +102,7 @@ jobs:
       - name: Run Tests
         run: |
           set -x
-          name=$(docker compose ps | grep opi-test | awk '{print $1}')
+          name=$(docker compose ps -a | grep opi-test | awk '{print $1}')
           rc=$(docker wait "${name}")
           if [ "${rc}" != "0" ]; then
               echo "opi-test failed:"
