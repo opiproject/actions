@@ -4,6 +4,16 @@ name: Docker
 on:
   workflow_dispatch:
   workflow_call:
+    secrets:
+      DOCKERHUB_USERNAME:
+        description: 'Docker Hub username to be provided by the caller workflow'
+        required: true
+      DOCKERHUB_TOKEN:
+        description: 'Docker Hub RW-token for publishing docker images'
+        required: true
+      DOCKERHUB_TOKEN_DELETE:
+        description: 'Docker Hub RWD-token to update image descriptions'
+        required: true
   push:
     branches: [ main ]
   pull_request:
