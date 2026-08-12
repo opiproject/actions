@@ -40,6 +40,9 @@ jobs:
 
     - run: poetry install --no-interaction --with=dev,test
 
+    - run: pip install ruff
+    - run: ruff check .
+
     - name: Lint code
       run: make lint
 
