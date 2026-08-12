@@ -110,6 +110,12 @@ jobs:
               exit 1
           fi
 
+          if [ -f scripts/tests.sh ]; then
+              scripts/tests.sh || exit $?
+          else
+              echo "No scripts/tests.sh"
+          fi
+
       - name: Logs
         if: always()
         run: docker compose logs
