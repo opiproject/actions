@@ -91,7 +91,9 @@ jobs:
           docker compose version
 
       - name: Install additional kernel modules needed for OPI like VRF
-        run: sudo apt-get install linux-modules-extra-$(uname -r)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y linux-modules-extra-$(uname -r)
 
       - name: Load additional kernel modules needed for OPI like VRF
         run: sudo modprobe -v vrf
